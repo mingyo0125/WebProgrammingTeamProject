@@ -10,11 +10,6 @@ a {
     color: #333;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
-
 /* 헤더 */
 header {
     background-color: #003366;
