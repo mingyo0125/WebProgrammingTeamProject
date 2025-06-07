@@ -81,10 +81,6 @@ nav a {
     height: 100%;
 }
 
-.searchInput:focus {
-    outline: none;
-}
-
 .searchButton {
     background-color: #005599;
     color: white;
@@ -110,7 +106,8 @@ nav a {
 }
 
 iframe {
-    padding-left: 35px;
+    padding-left: 25px;
+    padding-right: 10px;
     height: 500px;
     border: none;
 }
