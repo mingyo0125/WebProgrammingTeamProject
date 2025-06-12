@@ -6,44 +6,48 @@ body {
   background-color: #f4f4f4;
 }
 
-nav {
+.nav {
   background-color: #005599;
-  color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   display: flex;
   gap: 20px;
 }
 
-nav a {
+.nav a {
   color: white;
-  text-decoration: none;
+  font-weight: bold;
 }
 
-nav a:hover {
+.nav a:hover {
   text-decoration: underline;
 }
 
+/* ===== 검색바 ===== */
 .searchBar {
+  margin: 20px auto;
+  width: 400px;
+  height: 45px;
   display: flex;
-  justify-content: center;
-  margin: 20px;
+  border: 2px solid #005599;
+  border-radius: 30px;
+  background-color: white;
+  overflow: hidden;
 }
 
 .searchInput {
-  width: 300px;
-  padding: 10px;
+  flex: 1;
+  border: none;
+  padding: 0 15px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .searchButton {
-  padding: 10px 15px;
-  font-size: 16px;
-  border: 1px solid #005599;
   background-color: #005599;
   color: white;
-  border-radius: 0 4px 4px 0;
+  border: none;
+  padding: 0 20px;
+  font-size: 16px;
   cursor: pointer;
 }
 
