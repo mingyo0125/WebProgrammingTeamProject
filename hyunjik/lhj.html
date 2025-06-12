@@ -3,76 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>중고샵 - 문학, 소설, 에세이 중고 도서</title>
-  <link rel="stylesheet" href="simple_shop_style.css">
-  <script>
-    function filterCategory(category) {
-      const items = document.querySelectorAll('.book-card');
-      items.forEach(item => {
-        if (category === 'all' || item.dataset.category === category) {
-          item.style.display = 'flex';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    }
-
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      const tabButtons = document.querySelectorAll('.tab-menu li');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-     document.querySelector(`.tab-menu li[onclick="showTab('${tabId}')"]`).classList.add('active');
-
-    }
-
-    window.onload = function() {
-      showTab('weekly');
-    };
-  </script>
-
-  <style>
-    
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- 카테고리 필터 라디오 버튼 (숨김) -->
+  <input type="radio" name="category" id="filter-all" class="category-filter" checked>
+  <input type="radio" name="category" id="filter-novel" class="category-filter">
+  <input type="radio" name="category" id="filter-essay" class="category-filter">
+  <input type="radio" name="category" id="filter-literature" class="category-filter">
+  <input type="radio" name="category" id="filter-children" class="category-filter">
+  <input type="radio" name="category" id="filter-culture" class="category-filter">
+  <input type="radio" name="category" id="filter-language" class="category-filter">
+  <input type="radio" name="category" id="filter-magazine" class="category-filter">
+
+  <!-- 탭 필터 라디오 버튼 (숨김) -->
+  <input type="radio" name="tab" id="tab-weekly" class="tab-filter" checked>
+  <input type="radio" name="tab" id="tab-new" class="tab-filter">
+
   <nav>
     <a href="../Mingyo/MainScreen.html">홈</a>
     <a href="#">베스트셀러</a>
     <a href="#">로그인</a>
   </nav>
 
-<!-- 검색바 -->
+  <!-- 검색바 -->
   <div class="searchBar">
     <input class="searchInput" type="text" placeholder="도서명, 저자명 입력" />
     <button class="searchButton">검색</button>
   </div>
 
-  <div class="sidebar">
-    <h3>카테고리</h3>
-    <ul class="category-list">
-      <li onclick="filterCategory('all')">전체</li>
-      <li onclick="filterCategory('novel')">소설</li>
-      <li onclick="filterCategory('essay')">에세이</li>
-      <li onclick="filterCategory('literature')">문학</li>
-      <li onclick="filterCategory('children')">어린이</li>
-      <li onclick="filterCategory('culture')">예술/대중문화</li>
-      <li onclick="filterCategory('language')">외국어</li>
-      <li onclick="filterCategory('magazine')">잡지</li>
-    </ul>
-  </div>
-
   <div class="container">
+    <div class="sidebar">
+      <h3>카테고리</h3>
+      <ul class="category-list">
+        <li data-category="all"><label for="filter-all">전체</label></li>
+        <li data-category="novel"><label for="filter-novel">소설</label></li>
+        <li data-category="essay"><label for="filter-essay">에세이</label></li>
+        <li data-category="literature"><label for="filter-literature">문학</label></li>
+        <li data-category="children"><label for="filter-children">어린이</label></li>
+        <li data-category="culture"><label for="filter-culture">예술/대중문화</label></li>
+        <li data-category="language"><label for="filter-language">외국어</label></li>
+        <li data-category="magazine"><label for="filter-magazine">잡지</label></li>
+      </ul>
+    </div>
+
     <div class="mainContainer">
       <div class="top-bar">
         <h2>📚 추천 중고 도서</h2>
         <ul class="tab-menu">
-          <li onclick="showTab('weekly')" class="active">주간 베스트</li>
-          <li onclick="showTab('new')">신간 베스트</li>
+          <li data-tab="weekly"><label for="tab-weekly">주간 베스트</label></li>
+          <li data-tab="new"><label for="tab-new">신간 베스트</label></li>
         </ul>
       </div>
 
-      <div id="weekly" class="tab-content active">
+      <div id="weekly" class="tab-content">
         <div class="book-card" data-category="essay">
           <span class="badge excellent">최상</span>
           <img src="https://image.aladin.co.kr/product/36566/9/cover200/k992039144_1.jpg" alt="같이 밥 먹고 싶은 아저씨가 되는 법">
@@ -137,7 +121,7 @@
 
         <div class="book-card" data-category="literature">
           <span class="badge fair">중</span>
-          <img src="https://image.aladin.co.kr/product/15136/29/cover500/k962533360_2.jpg" alt="죽고 싶지만 떡볶이는 먹고 싶어" > 
+          <img src="https://image.aladin.co.kr/product/15136/29/cover500/k962533360_2.jpg" alt="죽고 싶지만 떡볶이는 먹고 싶어">
           <h4>죽고 싶지만 떡볶이는 먹고 싶어</h4>
           <p>백세희 저 | 흔</p>
           <p class="rating">⭐⭐⭐☆☆</p>
@@ -154,57 +138,65 @@
           <p><span class="original-price">9,500원</span> <span class="sale-price">4,500원</span></p>
           <button class="searchButton">장바구니</button>
         </div>
-<!-- 어린이 -->
-<div class="book-card" data-category="children">
-  <span class="badge good">상</span>
-  <img src="https://image.aladin.co.kr/product/34/91/cover200/8971968710_2.gif" alt="마당을 나온 암탉" >
-  <h4>마당을 나온 암탉</h4>
-  <p>황선미 글 | 창비</p>
-  <p class="rating">⭐⭐⭐⭐⭐</p>
-  <p><span class="original-price">12,000원</span> <span class="sale-price">9,600원</span></p>
-  <button class="searchButton">장바구니</button>
-</div>
 
+        <div class="book-card" data-category="children">
+          <span class="badge good">상</span>
+          <img src="https://image.aladin.co.kr/product/34/91/cover200/8971968710_2.gif" alt="마당을 나온 암탉">
+          <h4>마당을 나온 암탉</h4>
+          <p>황선미 글 | 창비</p>
+          <p class="rating">⭐⭐⭐⭐⭐</p>
+          <p><span class="original-price">12,000원</span> <span class="sale-price">9,600원</span></p>
+          <button class="searchButton">장바구니</button>
+        </div>
 
-<!-- 예술/대중문화 -->
-<div class="book-card" data-category="culture">
-  <span class="badge excellent">최상</span>
-  <img src="https://image.aladin.co.kr/product/16956/21/cover150/e142434964_2.jpg" alt="예술가로 산다는 것" >
-  <h4>예술가로 산다는 것</h4>
-  <p>박영택, 김홍희 편저 | 마음산책</p>
-  <p class="rating">⭐⭐⭐⭐☆</p>
-  <p><span class="original-price">16,000원</span> <span class="sale-price">11,200원</span></p>
-  <button class="searchButton">장바구니</button>
-</div>
+        <div class="book-card" data-category="culture">
+          <span class="badge excellent">최상</span>
+          <img src="https://image.aladin.co.kr/product/16956/21/cover150/e142434964_2.jpg" alt="예술가로 산다는 것">
+          <h4>예술가로 산다는 것</h4>
+          <p>박영택, 김홍희 편저 | 마음산책</p>
+          <p class="rating">⭐⭐⭐⭐☆</p>
+          <p><span class="original-price">16,000원</span> <span class="sale-price">11,200원</span></p>
+          <button class="searchButton">장바구니</button>
+        </div>
 
+        <div class="book-card" data-category="language">
+          <span class="badge excellent">최상</span>
+          <img src="https://image.aladin.co.kr/product/30764/91/cover200/k242830553_1.jpg" alt="영어 회화 핵심패턴 233">
+          <h4>영어 회화 핵심패턴 233</h4>
+          <p>길벗이지톡 편집부 | 길벗이지톡</p>
+          <p class="rating">⭐⭐⭐⭐☆</p>
+          <p><span class="original-price">14,000원</span> <span class="sale-price">12,000원</span></p>
+          <button class="searchButton">장바구니</button>
+        </div>
 
-<!-- 외국어 -->
-<div class="book-card" data-category="language">
-  <span class="badge excellent">최상</span>
-  <img src="https://image.aladin.co.kr/product/30764/91/cover200/k242830553_1.jpg" alt="영어 회화 핵심패턴 233" >
-  <h4>영어 회화 핵심패턴 233</h4>
-  <p>길벗이지톡 편집부 | 길벗이지톡</p>
-  <p class="rating">⭐⭐⭐⭐☆</p>
-  <p><span class="original-price">14,000원</span> <span class="sale-price">12,000원</span></p>
-  <button class="searchButton">장바구니</button>
-</div>
+        <div class="book-card" data-category="magazine">
+          <span class="badge fair">중</span>
+          <img src="https://image.aladin.co.kr/product/34693/1/cover200/k452933915_1.jpg" alt="매거진 B Vol.98 Uniqlo">
+          <h4>매거진 B Vol.98 Uniqlo</h4>
+          <p>B Media Company 편집부 | 매거진B</p>
+          <p class="rating">⭐⭐⭐☆☆</p>
+          <p><span class="original-price">25,000원</span> <span class="sale-price">23,750원</span></p>
+          <button class="searchButton">장바구니</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-
-<!-- 잡지 -->
-<div class="book-card" data-category="magazine">
-  <span class="badge fair">중</span>
-  <img src="https://image.aladin.co.kr/product/34693/1/cover200/k452933915_1.jpg" alt="매거진 B Vol.98 Uniqlo" >
-  <h4>매거진 B Vol.98 Uniqlo</h4>
-  <p>B Media Company 편집부 | 매거진B</p>
-  <p class="rating">⭐⭐⭐☆☆</p>
-  <p><span class="original-price">25,000원</span> <span class="sale-price">23,750원</span></p>
-  <button class="searchButton">장바구니</button>
-</div>
-
-
-      </div> <!-- end of #new -->
-    </div> <!-- end of .mainContainer -->
-  </div> <!-- end of .container -->
+  <hr>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4>온라인 서점</h4>
+        <p>대표: 정민교 | 사업자등록번호: 123-45-67890</p>
+        <p>주소: 서울특별시 어딘가로 123</p>
+        <p>대표번호: 02-1234-5678 | 이메일: support@bookstore.com</p>
+      </div>
+      <div class="footer-right">
+        <a href="#">이용약관</a> | 
+        <a href="#">개인정보처리방침</a> | 
+        <a href="#">고객센터</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

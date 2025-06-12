@@ -1,4 +1,52 @@
-/* 기존 스타일 유지 + 이미지/레이아웃 개선 */
+/* ===== 기본 및 기존 스타일 유지 ===== */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  /* flex 설정은 html, body 같이 넣어도 무방 */
+}
+
+.container {
+  display: flex;
+  flex: 1; /* 화면 전체 높이 중 메인 영역 최대 확장 */
+  padding: 20px;
+  position: static !important;
+  overflow: visible !important;
+}
+
+.sidebar {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 100;
+  border-right: 1px solid #ccc;
+}
+
+.mainContainer {
+  margin-left: 240px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(100% - 240px);
+  flex: 1; /* 남은 공간 모두 차지 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== 책 카드 스타일 ===== */
 
 .book-card img {
   width: 100px;
@@ -30,18 +78,8 @@
   min-height: 380px;
 }
 
-.searchButton {
-  padding: 6px 12px;
-  font-size: 14px;
-  border: 1px solid #005599;
-  background-color: #005599;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.searchButton:hover {
-  background-color: #003f80;
+.book-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .book-card h4 {
@@ -51,87 +89,15 @@
   text-align: center;
 }
 
-.book-card p {
-  margin: 2px 0;
-  text-align: center;
-}
-
-/* 기타 기존 스타일 유지 */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-nav {
-  background-color: #005599;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.searchBar {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.searchInput {
-  width: 300px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
-}
-
-.container {
-  display: flex;
-  padding: 20px;
-  position: static !important;
-  overflow: visible !important;
-}
-
-.sidebar {
-  position: fixed;
-  top: 120px;
-  left: 0;
-  width: 220px;
-  height: calc(100vh - 120px);
-  overflow-y: auto;
-  background-color: #f9f9f9;
-  padding: 10px;
-  box-sizing: border-box;
-  z-index: 100;
-  border-right: 1px solid #ccc;
-}
-
-.mainContainer {
-  margin-left: 240px;
-  padding: 20px;
-  box-sizing: border-box;
-  width: calc(100% - 240px);
-}
-
-.book-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
 .book-card h4:hover,
 .book-card p:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.book-card p {
+  margin: 2px 0;
+  text-align: center;
 }
 
 .original-price {
@@ -170,6 +136,59 @@ nav a:hover {
   color: #f39c12;
 }
 
+/* ===== 검색 버튼 ===== */
+
+.searchButton {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #005599;
+  background-color: #005599;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #003f80;
+}
+
+/* ===== 네비게이션 ===== */
+
+nav {
+  background-color: #005599;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 검색 바 ===== */
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.searchInput {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+/* ===== 탭 메뉴 ===== */
 
 .tab-menu {
   list-style: none;
@@ -178,7 +197,6 @@ nav a:hover {
   margin-top: 10px; /* h2와 간격 */
   border-bottom: 2px solid #005599;
 }
-
 
 .tab-menu li {
   cursor: pointer;
@@ -191,13 +209,12 @@ nav a:hover {
   color: #007BFF;
 }
 
-
-
 .tab-menu li.active {
   font-weight: bold;
   border-bottom: 3px solid #005599;
 }
 
+/* 탭 콘텐츠 기본 숨김 */
 .tab-content {
   display: none;
   flex-wrap: wrap;
@@ -205,12 +222,16 @@ nav a:hover {
   gap: 20px;
 }
 
-.top-bar {
+/* 활성 탭 */
+.tab-content.active {
   display: flex;
-  flex-direction: column; /* 수직 정렬로 변경 */
-  align-items: flex-start; /* 좌측 정렬 */
-  margin: 10px 0 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
 }
+
+/* ===== 카테고리 리스트 ===== */
+
 .category-list {
   list-style: none;
   padding: 0;
@@ -234,19 +255,45 @@ nav a:hover {
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
+/* ===== 상단 바 ===== */
 
-  .tab-content {
-    flex-direction: column;
-    align-items: center;
-  }
+.top-bar {
+  display: flex;
+  flex-direction: column; /* 수직 정렬 */
+  align-items: flex-start; /* 좌측 정렬 */
+  margin: 10px 0 20px;
+}
 
-  .book-card {
-    width: 90%;
-  }
+/* ===== 푸터 ===== */
 
+.footer {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+  /* margin-top 제거 */
+}
 
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left p {
+  margin: 4px 0;
+}
+
+.footer-right a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
 }
