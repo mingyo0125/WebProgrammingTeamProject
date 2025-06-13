@@ -3,126 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>도서 웹페이지</title>
-  <link rel="stylesheet" href="style.css">
+  <title>온라인 서점 메인</title>
+  <link rel="stylesheet" href="main_style.css" />
 </head>
 <body>
 
-  <!-- 캐러셀 영역 -->
+  <!-- 네비게이션 -->
+  <nav class="nav">
+    <a href="#">홈</a>
+    <a href="#">베스트셀러</a>
+    <a href="#">신간</a>
+    <a href="#">이벤트</a>
+    <a href="#">마이페이지</a>
+  </nav>
+
+  <!-- 검색바 -->
+  <div class="searchBar">
+    <input class="searchInput" type="text" placeholder="도서명, 저자명 입력" />
+    <button class="searchButton">검색</button>
+  </div>
+
+  <!-- 캐러셀 -->
   <div class="carousel-container">
     <button class="carousel-arrow left" onclick="moveSlide(-1)">&#10094;</button>
     <div class="carousel-wrapper">
-      <div class="carousel-track" id="carousel-track" >
-        
-        <div class="carousel-item"><img src="Group 1.png"></div>
-        <div class="carousel-item"><img src="Group 2.png"></div>
-        <div class="carousel-item"><img src="Group 3.png"></div>
-        <div class="carousel-item"><img src="Group 4.png"></div>
-        <div class="carousel-item"><img src="Group 1.png"></div>
-        <div class="carousel-item"><img src="Group 2.png"></div>
-        <div class="carousel-item"><img src="Group 3.png"></div>
-        <div class="carousel-item"><img src="Group 4.png"></div>
-      </div>    
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-item"><img src="Group 1.png" alt=""></div>
+        <div class="carousel-item"><img src="Group 2.png" alt=""></div>
+        <div class="carousel-item"><img src="Group 3.png" alt=""></div>
+        <div class="carousel-item"><img src="Group 4.png" alt=""></div>
+      </div>
     </div>
     <button class="carousel-arrow right" onclick="moveSlide(1)">&#10095;</button>
     <div class="carousel-dots" id="carousel-dots"></div>
   </div>
 
-  <!-- 카테고리 선택 -->
-  <select id="category-selector" onchange="changeCategory(this.value)">
-    <option value="cat1">장르 소설</option>
-    <option value="cat2">과학</option>
-    <option value="cat3">예술/대중문화</option>
-    <option value="cat4">만화</option>
-  </select>
+  <div class="main-container">
 
-  <!-- 카테고리별 콘텐츠 -->
-  <div id="category-content">
+    <!-- 카테고리 선택 -->
+    <select id="category-selector" onchange="changeCategory(this.value)">
+      <option value="cat1">장르 소설</option>
+      <option value="cat2">과학</option>
+      <option value="cat3">예술/대중문화</option>
+      <option value="cat4">만화</option>
+    </select>
 
-    <!-- 카테고리 1 -->
-    <div class="category-section" id="cat1-section">
-      <div class="section-title"><b>지니의 Choice</b></div>
-      <div class="book-box">
-        <img src="MD's Choice.jpg" alt="지니의 추천 책" class="book-box-image">
-        <div class="book-box-text">
-          <h3>긴키 지방의 어느 장소에 대하여</h3>
-          <h4>세스지(지은이), 전선영(옭긴이) | 반타 | 2025년 4월</h4>
-          <h4><span style="color:palevioletred">15.120원</span></h4>
-          <hr>
-          <p>
-            <span style="color:coral">'이 호러가 대단하다' 1위 선정!</span><br>
-            일본 내 호러 열풍에 새롭게 불을 지핀 충격적 화제작.
-          </p>
-        </div>
-        </div>
-      
-    </div>
-      </div>
-      
-    </div>
-
-    <!-- 카테고리 2 -->
-    <div class="category-section" id="cat2-section" style="display:none;">
-      <div class="section-title"><b>지니의 Choice</b></div>
-      <div class="book-box">
-        <img src="챗GPT.jpg" alt="책 표지" class="book-box-image">
-        <div class="book-box-text">
-          <h3>비전공자도 이해할 수 있는 챗GPT</h3>
-          <h4>박상길 (지은이), 정진호 (그림) | 비즈니스북스 | 2025년 5월</h4>
-          <h4><span style="color:palevioletred">17,550원</span></h4>
-          <hr>
-          <p>
-            <span style="color:coral">챗GPT를 일상과 업무에 활용하기 위한 모든 기초 지식</span><br>
-           《비전공자도 이해할 수 있는 AI 지식》으로 10만 독자의 사랑을 받은 저자들이 챗GPT를 다룬 후속작으로 돌아왔다. 이 책은 생성형 AI의 대표 주자 챗GPT의 원리를 그림과 함께 쉽고 흥미롭게 설명한다. 
-        </p>
+    <!-- 카테고리별 콘텐츠 -->
+    <div id="category-content">
+      <div class="category-section" id="cat1-section">
+        <div class="section-title">지니의 Choice</div>
+        <div class="book-box">
+          <img src="MD's Choice.jpg" class="book-box-image" />
+          <div class="book-box-text">
+            <h3>긴키 지방의 어느 장소에 대하여</h3>
+            <h4>세스지 | 반타 | 2025년 4월</h4>
+            <h4 class="price">15,120원</h4>
+            <p><span class="highlight">‘이 호러가 대단하다’ 1위!</span><br>일본 내 호러 열풍에 불을 지핀 화제작</p>
+          </div>
         </div>
       </div>
-      
-    </div>
 
-    <!-- 카테고리 3 -->
-    <div class="category-section" id="cat3-section" style="display:none;">
-      <div class="section-title"><b>지니의 Choice</b></div>
-      <div class="book-box">
-        <img src="오아시스 마플.jpg" alt="책 표지" class="book-box-image">
-        <div class="book-box-text">
-          <h3>오아시스 더 마스터플랜</h3>
-          <h4>케빈 커민스 (지은이), 이원열 (옮긴이) | 클 | 2025년 5월</h4>
-          <h4><span style="color:palevioletred">49,500원</span></h4>
-          <hr>
-          <p>
-            <span style="color:coral">15년 만에, 오아시스의 재결합. 다시 그들의 시대가 돌아왔다.</span><br>
-           이 역사적인 소식과 함께 오아시스의 가장 뜨겁고 치열했던 초창기를 기록한 사진들이 세상에 공개되었다. 그들의 신화가 시작되기 전, 세계적인 사진작가 케빈 커민스가 포착한 오아시스 탄생의 여정이다.
-        </p>
+      <div class="category-section" id="cat2-section" style="display:none;">
+        <div class="section-title">지니의 Choice</div>
+        <div class="book-box">
+          <img src="챗GPT.jpg" class="book-box-image" />
+          <div class="book-box-text">
+            <h3>비전공자도 이해할 수 있는 챗GPT</h3>
+            <h4>박상길 | 비즈니스북스 | 2025년 5월</h4>
+            <h4 class="price">17,550원</h4>
+            <p><span class="highlight">AI 입문 베스트셀러</span><br>비전공자도 쉽게 이해하는 생성형 AI 개론서</p>
+          </div>
         </div>
       </div>
-      
-    </div>
 
-    <!-- 카테고리 4 -->
-    <div class="category-section" id="cat4-section" style="display:none;">
-      <div class="section-title"><b>지니의 Choice</b></div>
-      <div class="book-box">
-        <img src="괴수 8호.jpg" alt="책 표지" class="book-box-image">
-        <div class="book-box-text">
-          <h3>괴수 8호 15 (트리플 특장판)</h3>
-          <h4>마츠모토 나오야 (지은이), 유유리 (옮긴이) | 서울미디어코믹스(서울문화사) | 2025년 5월</h4>
-          <h4><span style="color:palevioletred">5,400원</span></h4>
-          <hr>
-          <p>
-            <span style="color:coral">트리플 특장판</span><br>
-            어린 시절의 약속을 지켜, 아시로 미나의 옆에서 괴수 9호를 토벌하기 위해 움직이는 카프카. 격렬한 공방 중에 폭주 상태인 8호의 힘을 맞부딪쳐 9호의 실드를 깨고 핵을 꿰뚫자, 9호의 안에서 그 힘의 근원이 나타나는데…?!
-        </p>
+      <div class="category-section" id="cat3-section" style="display:none;">
+        <div class="section-title">지니의 Choice</div>
+        <div class="book-box">
+          <img src="오아시스 마플.jpg" class="book-box-image" />
+          <div class="book-box-text">
+            <h3>오아시스 더 마스터플랜</h3>
+            <h4>케빈 커민스 | 클 | 2025년 5월</h4>
+            <h4 class="price">49,500원</h4>
+            <p><span class="highlight">오아시스 15년 만의 귀환</span><br>그들의 초창기를 기록한 사진집</p>
+          </div>
         </div>
       </div>
-      
+
+      <div class="category-section" id="cat4-section" style="display:none;">
+        <div class="section-title">지니의 Choice</div>
+        <div class="book-box">
+          <img src="괴수 8호.jpg" class="book-box-image" />
+          <div class="book-box-text">
+            <h3>괴수 8호 15 (트리플 특장판)</h3>
+            <h4>마츠모토 나오야 | 서울문화사 | 2025년 5월</h4>
+            <h4 class="price">5,400원</h4>
+            <p><span class="highlight">트리플 특장판</span><br>괴수 9호와의 마지막 전투</p>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- 주간 베스트셀러 -->
+    <section class="horizontal-section">
+      <div class="section-title">주간 베스트셀러</div>
+      <div class="horizontal-scroll">
+        <div class="book-item"><img src="신주로.jpg"><div>신주로</div></div>
+        <div class="book-item"><img src="나는 파리를 불태운다.jpg"><div>나는 파리를 불태운다</div></div>
+        <div class="book-item"><img src="아이들의 집.jpg"><div>아이들의 집</div></div>
+        <div class="book-item"><img src="아가씨와 밤.jpg"><div>아가씨와 밤</div></div>
+        <div class="book-item"><img src="오닉스 스톰.jpg"><div>오닉스 스톰</div></div>
+        <div class="book-item"><img src="밀실 황금시대의 살인.jpg"><div>밀실 황금시대의 살인</div></div>
+      </div>
+    </section>
+
+    <!-- 지니가 찾아낸 새 책 -->
+    <section class="horizontal-section">
+      <div class="section-title">지니가 찾아낸 새 책</div>
+      <div class="horizontal-scroll">
+        <div class="book-item"><img src="신주로.jpg"><div>신주로</div></div>
+        <div class="book-item"><img src="나는 파리를 불태운다.jpg"><div>나는 파리를 불태운다</div></div>
+        <div class="book-item"><img src="아이들의 집.jpg"><div>아이들의 집</div></div>
+        <div class="book-item"><img src="아가씨와 밤.jpg"><div>아가씨와 밤</div></div>
+        <div class="book-item"><img src="오닉스 스톰.jpg"><div>오닉스 스톰</div></div>
+        <div class="book-item"><img src="밀실 황금시대의 살인.jpg"><div>밀실 황금시대의 살인</div></div>
+      </div>
+    </section>
   </div>
 
-  <!-- 스크립트 -->
   <script>
-    // 캐러셀 동작
+    // 캐러셀
     const track = document.getElementById('carousel-track');
     const dotsContainer = document.getElementById('carousel-dots');
     const totalItems = track.children.length;
@@ -140,98 +149,24 @@
       }
     }
 
-    function moveSlide(direction) {
-  clearInterval(autoSlideInterval); // 자동 슬라이드 멈춤
-  currentSlide += direction;
-  if (currentSlide < 0) currentSlide = totalSlides - 1;
-  if (currentSlide >= totalSlides) currentSlide = 0;
-  track.style.transition = 'transform 0.5s ease-in-out';
-  track.style.transform = `translateX(-${(100 / visibleItems) * visibleItems * currentSlide}%)`;
-  updateDots();
-
-  // 다시 자동 슬라이드 시작
-  autoSlideInterval = setInterval(() => {
-    currentSlide++;
-    if (currentSlide >= totalSlides) currentSlide = 0;
-    track.style.transition = 'transform 0.5s ease-in-out';
-    track.style.transform = `translateX(-${(100 / visibleItems) * visibleItems * currentSlide}%)`;
-    updateDots();
-  }, 3000);
-}
-// 자동 캐러셀 루프 시작
-let autoSlideInterval = setInterval(() => {
-  currentSlide++;
-  if (currentSlide >= totalSlides) currentSlide = 0;
-  track.style.transition = 'transform 0.5s ease-in-out';
-  track.style.transform = `translateX(-${(100 / visibleItems) * visibleItems * currentSlide}%)`;
-  updateDots();
-}, 3000); // 3초마다 이동
-
-
-    updateDots();
-
-    // 카테고리 전환
-    function changeCategory(categoryId) {
-      const sections = document.querySelectorAll('.category-section');
-      sections.forEach(section => section.style.display = 'none');
-      const active = document.getElementById(categoryId + '-section');
-      if (active) active.style.display = 'block';
+    function moveSlide(dir) {
+      clearInterval(autoSlideInterval);
+      currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${100 * currentSlide}%)`;
+      updateDots();
+      autoSlideInterval = setInterval(() => moveSlide(1), 3000);
     }
 
-    // 초기 선택 설정
+    let autoSlideInterval = setInterval(() => moveSlide(1), 3000);
+    updateDots();
+
+    // 카테고리
+    function changeCategory(id) {
+      document.querySelectorAll('.category-section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id + '-section').style.display = 'block';
+    }
     window.onload = () => changeCategory('cat1');
   </script>
 
 </body>
 </html>
-
-
-<section id="section-newbooks">
-    <div class="section-title"><b>주간 베스트셀러</b></div>
-    <div class="horizontal-scroll" id="newbooks-container">
-      <div class="book-item rank1">
-  <span class="rank-badge">1위</span>
-  <img src="신주로.jpg" alt="책1" class="scroll-book-img">
-  <div>신주로</div>
-</div>
-     <div class="book-item rank2">
-  <span class="rank-badge">2위</span>
-  <img src="나는 파리를 불태운다.jpg" alt="책2" class="scroll-book-img">
-  <div>나는 파리를 불태운다</div>
-</div>
-      <div class="book-item rank3">
-  <span class="rank-badge">3위</span>
-  <img src="아이들의 집.jpg" alt="책3" class="scroll-book-img">
-  <div>아이들의 집</div>
-</div>
-      <div class="book-item"><img src="아가씨와 밤.jpg" alt="책4" class="scroll-book-img"><div>아가씨와 밤</div></div>
-      <div class="book-item"><img src="오닉스 스톰.jpg" alt="책5" class="scroll-book-img"><div>오닉스 스톰</div></div>
-      <div class="book-item"><img src="밀실 황금시대의 살인.jpg" alt="책6" class="scroll-book-img"><div>밀실 황금시대의 살인</div></div>
-    
-    </div>
-  </section>
-
-  <section id="section-newbooks">
-    <div class="section-title"><b>지니가 찾아낸 새 책</b></div>
-    <div class="horizontal-scroll" id="newbooks-container">
-      <div class="book-item rank1">
-  
-  <img src="신주로.jpg" alt="책1" class="scroll-book-img">
-  <div>신주로</div>
-</div>
-     <div class="book-item rank2">
-  
-  <img src="나는 파리를 불태운다.jpg" alt="책2" class="scroll-book-img">
-  <div>나는 파리를 불태운다</div>
-</div>
-      <div class="book-item rank3">
-
-  <img src="아이들의 집.jpg" alt="책3" class="scroll-book-img">
-  <div>아이들의 집</div>
-</div>
-      <div class="book-item"><img src="아가씨와 밤.jpg" alt="책4" class="scroll-book-img"><div>아가씨와 밤</div></div>
-      <div class="book-item"><img src="오닉스 스톰.jpg" alt="책5" class="scroll-book-img"><div>오닉스 스톰</div></div>
-      <div class="book-item"><img src="밀실 황금시대의 살인.jpg" alt="책6" class="scroll-book-img"><div>밀실 황금시대의 살인</div></div>
-    
-    </div>
-  </section>

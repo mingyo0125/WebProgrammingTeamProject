@@ -1,79 +1,187 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>온라인 서점</title>
-    <link rel="stylesheet" href="../Css/mainStyle.css">
-    <link rel="stylesheet" href="MainScreenStyle.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>온라인 서점 메인</title>
+  <link rel="stylesheet" href="MainScreenStyle.css" />
 </head>
 <body>
 
-    <header>
-        <h1>온라인 서점</h1>
-    </header>
+  <!-- 네비게이션 -->
+  <nav class="nav">
+    <a href="MainScreen.html">홈</a>
+    <a href="../hyunjik/lhj.html">베스트셀러</a>
+    <a href="#">로그인</a>
+  </nav>
 
-    <nav>
-        <a href="#">홈</a>
-        <a href="#">베스트셀러</a>
-        <a href="#">신간</a>
-        <a href="#">로그인</a>
-    </nav>
+  <!-- 검색바 -->
+  <div class="searchBar">
+    <input class="searchInput" type="text" placeholder="도서명, 저자명 입력" />
+    <button class="searchButton">검색</button>
+  </div>
 
-    < class="mainContainer">
-
-        <div class="searchBar">
-            <input type="text" class="searchInput" placeholder="책 제목 또는 저자 검색">
-            <button class="searchButton">검색</button>
-        </div>
-
-        <!-- <div class="sidebar">
-            <h3>카테고리</h3>
-            <a href="#" class="hoverButton">소설</a>
-            <a href="#">에세이</a>
-            <a href="#">자기계발</a>
-            <a href="#">경제</a>
-        </div> -->
-
-        <div class="spotlightBookContainer">
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-
-
-
-        </div>
-
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <div class="book-list">
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-            <iframe src="Books/TestBook.html"></iframe>
-
-            
-        </div>
-            <!-- 추가 책 아이템들 -->
-        </div>
+  <!-- 캐러셀 -->
+  <div class="carousel-container">
+    <button class="carousel-arrow left" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-item"><img src="Group 1.png" alt=""></div>
+        <div class="carousel-item"><img src="Group 2.png" alt=""></div>
+        <div class="carousel-item"><img src="Group 3.png" alt=""></div>
+        <div class="carousel-item"><img src="Group 4.png" alt=""></div>
+      </div>
     </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1)">&#10095;</button>
+    <div class="carousel-dots" id="carousel-dots"></div>
+  </div>
+
+  <div class="main-container">
+
+    <!-- 카테고리 선택 -->
+    <select id="category-selector" onchange="changeCategory(this.value)">
+      <option value="cat1">장르 소설</option>
+      <option value="cat2">과학</option>
+      <option value="cat3">예술/대중문화</option>
+      <option value="cat4">만화</option>
+    </select>
+
+    <!-- 카테고리별 콘텐츠 -->
+    <div id="category-content">
+      <div class="category-section" id="cat1-section">
+        <div class="section-title">오늘의 추천 도서</div>
+        <div class="book-box">
+          <img src="MD's Choice.jpg" class="book-box-image" />
+          <div class="book-box-text">
+            <h3>긴키 지방의 어느 장소에 대하여</h3>
+            <h4>세스지 | 반타 | 2025년 4월</h4>
+            <h4 class="price">15,120원</h4>
+            <p><span class="highlight">‘이 호러가 대단하다’ 1위!</span><br>일본 내 호러 열풍에 불을 지핀 화제작</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-section" id="cat2-section" style="display:none;">
+        <div class="section-title">지니의 Choice</div>
+        <div class="book-box">
+          <img src="챗GPT.jpg" class="book-box-image" />
+          <div class="book-box-text">
+            <h3>비전공자도 이해할 수 있는 챗GPT</h3>
+            <h4>박상길 | 비즈니스북스 | 2025년 5월</h4>
+            <h4 class="price">17,550원</h4>
+            <p><span class="highlight">AI 입문 베스트셀러</span><br>비전공자도 쉽게 이해하는 생성형 AI 개론서</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-section" id="cat3-section" style="display:none;">
+        <div class="section-title">지니의 Choice</div>
+        <div class="book-box">
+          <img src="오아시스 마플.jpg" class="book-box-image" />
+          <div class="book-box-text">
+            <h3>오아시스 더 마스터플랜</h3>
+            <h4>케빈 커민스 | 클 | 2025년 5월</h4>
+            <h4 class="price">49,500원</h4>
+            <p><span class="highlight">오아시스 15년 만의 귀환</span><br>그들의 초창기를 기록한 사진집</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-section" id="cat4-section" style="display:none;">
+        <div class="section-title">지니의 Choice</div>
+        <div class="book-box">
+          <img src="괴수 8호.jpg" class="book-box-image" />
+          <div class="book-box-text">
+            <h3>괴수 8호 15 (트리플 특장판)</h3>
+            <h4>마츠모토 나오야 | 서울문화사 | 2025년 5월</h4>
+            <h4 class="price">5,400원</h4>
+            <p><span class="highlight">트리플 특장판</span><br>괴수 9호와의 마지막 전투</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 주간 베스트셀러 -->
+    <section class="horizontal-section">
+    <div class="section-title">주간 베스트셀러</div>
+    <div class="horizontal-scroll">
+        <div class="book-item"><a href=""><img src="신주로.jpg"><div>신주로</div></a></div>
+        <div class="book-item"><a href=""><img src="나는 파리를 불태운다.jpg"><div>나는 파리를 불태운다</div></a></div>
+        <div class="book-item"><a href=""><img src="아이들의 집.jpg"><div>아이들의 집</div></a></div>
+        <div class="book-item"><a href=""><img src="아가씨와 밤.jpg"><div>아가씨와 밤</div></a></div>
+        <div class="book-item"><a href=""><img src="오닉스 스톰.jpg"><div>오닉스 스톰</div></a></div>
+        <div class="book-item"><a href=""><img src="밀실 황금시대의 살인.jpg"><div>밀실 황금시대의 살인</div></a></div>
+    </div>
+    </section>
+
+    <section class="horizontal-section">
+    <div class="section-title">최근 화제의 책</div>
+    <div class="horizontal-scroll">
+        <div class="book-item"><a href=""><img src="신주로.jpg"><div>신주로</div></a></div>
+        <div class="book-item"><a href=""><img src="나는 파리를 불태운다.jpg"><div>나는 파리를 불태운다</div></a></div>
+        <div   div class="book-item"><a href=""><img src="아이들의 집.jpg"><div>아이들의 집</div></a></div>
+        <div class="book-item"><a href=""><img src="아가씨와 밤.jpg"><div>아가씨와 밤</div></a></div>
+        <div class="book-item"><a href=""><img src="오닉스 스톰.jpg"><div>오닉스 스톰</div></a></div>
+         <div class="book-item"><a href=""><img src="밀실 황금시대의 살인.jpg"><div>밀실 황금시대의 살인</div></a></div>
+    </div>
+    </section>
+
+
+  </div>
+
+  <hr>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4>온라인 서점</h4>
+        <p>대표: 정민교 | 사업자등록번호: 123-45-67890</p>
+        <p>주소: 서울특별시 어딘가로 123</p>
+        <p>대표번호: 02-1234-5678 | 이메일: support@bookstore.com</p>
+      </div>
+      <div class="footer-right">
+        <a href="#">이용약관</a> | 
+        <a href="#">개인정보처리방침</a> | 
+        <a href="#">고객센터</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const track = document.getElementById('carousel-track');
+    const dotsContainer = document.getElementById('carousel-dots');
+    const totalItems = track.children.length;
+    const visibleItems = 3;
+    const totalSlides = Math.ceil(totalItems / visibleItems);
+    let currentSlide = 0;
+
+    function updateDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === currentSlide) dot.classList.add('active');
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function moveSlide(dir) {
+      clearInterval(autoSlideInterval);
+      currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${100 * currentSlide}%)`;
+      updateDots();
+      autoSlideInterval = setInterval(() => moveSlide(1), 3000);
+    }
+
+    let autoSlideInterval = setInterval(() => moveSlide(1), 3000);
+    updateDots();
+
+    // 카테고리
+    function changeCategory(id) {
+      document.querySelectorAll('.category-section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id + '-section').style.display = 'block';
+    }
+    window.onload = () => changeCategory('cat1');
+  </script>
 
 </body>
 </html>
