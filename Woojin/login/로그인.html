@@ -1,0 +1,112 @@
+
+<head>
+  <title>로그인</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      font-family: sans-serif;
+    }
+
+    .login-container {
+      width: 320px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 200px;
+      margin: 0 auto 20px;
+    }
+
+    .input-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      background-color: #ccc;
+      color: white;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #004ea2;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .remember input {
+      margin-right: 5px;
+    }
+
+    .join-button {
+      background-color: #0078D4;
+    }
+
+    a.button {
+  display: inline-block;
+  text-align: center;
+  width: 90%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #0078D4;
+  color: white;
+  margin-bottom: 10px;
+}
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img class="logo" src="지니.PNG">
+
+    <div class="input-box">
+      <input type="text" placeholder="아이디를 입력해 주세요.">
+      <input type="password" placeholder="비밀번호를 입력해 주세요.">
+    </div>
+    <!--메인화면 html 입력--->
+    <a href="#" class="button just-button">로그인</a>
+    <div class="options">
+      <label class="remember">
+        <input type="checkbox"> 아이디 저장
+      </label>
+      <div>
+        <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a>
+      </div>
+    </div>
+        <br><a href="회원가입.html" class="button join-button">회원가입</a>
+  </div>
+</body>
+</html>

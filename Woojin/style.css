@@ -4,7 +4,7 @@
       margin: 0;
       padding: 0;
       background: #fff;
-       background-image: url("나무 바닥.jpg"); /* 배경 이미지 경로 */
+      /* background-image: url("나무 바닥.jpg"); */
   background-repeat: repeat; 
   background-size: cover; /* 이미지 비율 유지하면서 배경 채우기 */
     
