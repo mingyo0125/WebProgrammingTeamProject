@@ -29,32 +29,28 @@ a {
   text-decoration: underline;
 }
 
-/* ===== 검색바 ===== */
+/* ===== 검색 바 ===== */
 .searchBar {
-  margin: 20px auto;
-  width: 400px;
-  height: 45px;
   display: flex;
-  border: 2px solid #005599;
-  border-radius: 30px;
-  background-color: white;
-  overflow: hidden;
+  justify-content: center;
+  margin: 20px;
 }
 
 .searchInput {
-  flex: 1;
-  border: none;
-  padding: 0 15px;
+  width: 300px;
+  padding: 10px;
   font-size: 16px;
-  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
 }
 
 .searchButton {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #005599;
   background-color: #005599;
   color: white;
-  border: none;
-  padding: 0 20px;
-  font-size: 16px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
