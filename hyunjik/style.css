@@ -18,16 +18,12 @@ html, body {
 }
 
 .sidebar {
-  position: fixed;
   top: 120px;
   left: 0;
   width: 220px;
-  height: calc(100vh - 120px);
-  overflow-y: auto;
   background-color: #f9f9f9;
   padding: 10px;
   box-sizing: border-box;
-  z-index: 100;
   border-right: 1px solid #ccc;
 }
 
