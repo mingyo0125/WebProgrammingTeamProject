@@ -1,0 +1,283 @@
+/* 메인 콘텐츠 */
+.main {
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* 카테고리 사이드바 */
+.sidebar {
+    width: 200px;
+    float: left;
+    background-color: #eeeeee;
+    padding: 15px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 50px;
+}
+
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+    margin: 10px 0;
+}
+
+.sidebar a:hover{
+    background-color: #005599;
+    color: white;
+}
+
+.book-list {
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center; /* 가로축 가운데 정렬 */  
+
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+nav {
+    background-color: #005599;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.searchBar {
+    color: white;
+    padding: 0px 20px;
+    width: 400px;
+    height: 50px;
+    margin: 0 auto 20px;
+    border: 2px solid #005599;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 30px;
+    margin-right: 10px;
+
+    height: 100%;
+}
+
+.searchButton {
+    background-color: #005599;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+.mainContainer{
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 20px;
+}
+
+
+.spotlightBookContainer {
+    width: 50%;
+    margin: 0 auto;
+    height: 300px;
+    border: 2px solid #005599;
+    display: flex;;
+}
+
+iframe {
+    padding-left: 25px;
+    padding-right: 10px;
+    height: 500px;
+    border: none;
+}
+
+nav > a{
+    margin-left: 10%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.book-detail {
+    display: flex;
+    gap: 30px;
+}
+
+.book-image img {
+    width: 250px;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.book-image img:hover {
+    transform: scale(1.1);
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.book-info .meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d60000;
+    margin-bottom: 10px;
+}
+
+.delivery {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.buy-btn{
+    padding: 12px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.buy-button {
+    padding: 12px 20px;
+    background-color: white;
+    color: blue;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 50px;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.section p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.section ul {
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+.tab-container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+/* 종이책, 전자책 부분분 */
+input[type="radio"] {
+    display: none;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tabs label {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+input#tab-paper:checked ~ .tabs label[for="tab-paper"],
+input#tab-ebook:checked ~ .tabs label[for="tab-ebook"] {
+    color: #007aff;
+    border-bottom-color: #007aff;
+}
+
+.tab-content {
+    display: none;
+}
+
+input#tab-paper:checked ~ .content .paper,
+input#tab-ebook:checked ~ .content .ebook {
+    display: block;
+}
+
+.book-price {
+    font-size: 18px;
+    color: #d12d2d;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.buy-button:hover {
+    background: gainsboro;
+}
+.buy-btn:hover {
+    background: #005fcc;
+}
+
