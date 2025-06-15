@@ -2,23 +2,22 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>중고샵 - 문학, 소설, 에세이 중고 도서</title>
+    <title>BlueShelf - 문학, 소설, 경제 중고 도서</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- 카테고리 필터 라디오 버튼 (숨김) -->
     <input type="radio" name="category" id="filter-all" class="category-filter" checked />
-    <input type="radio" name="category" id="filter-novel" class="category-filter" />
-    <input type="radio" name="category" id="filter-essay" class="category-filter" />
-    <input type="radio" name="category" id="filter-literature" class="category-filter" />
-    <input type="radio" name="category" id="filter-children" class="category-filter" />
-    <input type="radio" name="category" id="filter-culture" class="category-filter" />
-    <input type="radio" name="category" id="filter-language" class="category-filter" />
-    <input type="radio" name="category" id="filter-magazine" class="category-filter" />
+    <input type="radio" name="category" id="filter-Domestic" class="category-filter" />
+    <input type="radio" name="category" id="filter-Foreign" class="category-filter" />
+    <input type="radio" name="category" id="filter-Children" class="category-filter" />
+    <input type="radio" name="category" id="filter-Art" class="category-filter" />
+    <input type="radio" name="category" id="filter-Business" class="category-filter" />
+    <input type="radio" name="category" id="filter-Genre" class="category-filter" />
+    <input type="radio" name="category" id="filter-Comics" class="category-filter" />
 
-    <!-- 탭 필터 라디오 버튼 (숨김) -->
     <input type="radio" name="tab" id="tab-weekly" class="tab-filter" checked />
-    <input type="radio" name="tab" id="tab-new" class="tab-filter" />
+<input type="radio" name="tab" id="tab-new" class="tab-filter" />
+
+
 
     <nav class="nav">
       <a href="../Mingyo/MainScreen.html"> <img src="../logo.png" style="width: 100px; height: 35px" /></a>
@@ -37,13 +36,13 @@
         <h3>카테고리</h3>
         <ul class="category-list">
           <li data-category="all"><label for="filter-all">전체</label></li>
-          <li data-category="novel"><label for="filter-novel">소설</label></li>
-          <li data-category="essay"><label for="filter-essay">에세이</label></li>
-          <li data-category="literature"><label for="filter-literature">문학</label></li>
-          <li data-category="children"><label for="filter-children">어린이</label></li>
-          <li data-category="culture"><label for="filter-culture">예술/대중문화</label></li>
-          <li data-category="language"><label for="filter-language">외국어</label></li>
-          <li data-category="magazine"><label for="filter-magazine">잡지</label></li>
+          <li data-category="Domestic"><label for="filter-Domestic">국내 소설</label></li>
+          <li data-category="Foreign"><label for="filter-Foreign">외국 소설</label></li>
+          <li data-category="Children"><label for="filter-Children">어린이</label></li>
+          <li data-category="Art"><label for="filter-Art">예술/대중문화</label></li>
+          <li data-category="Business"><label for="filter-Business">경제 경영</label></li>
+          <li data-category="Genre"><label for="filter-Genre">장르 소설</label></li>
+          <li data-category="Comics"><label for="filter-Comics">만화</label></li>
         </ul>
       </div>
 
@@ -56,151 +55,366 @@
           </ul>
         </div>
 
-        <div id="weekly" class="tab-content">
-          <div class="book-card" data-category="essay">
-            <span class="badge excellent">최상</span>
-            <img
-              src="https://image.aladin.co.kr/product/36566/9/cover200/k992039144_1.jpg"
-              alt="같이 밥 먹고 싶은 아저씨가 되는 법"
-            />
-            <h4>같이 밥 먹고 싶은 아저씨가 되는 법</h4>
-            <p>김태균 저 | 웅진북스</p>
-            <p class="rating">⭐⭐⭐⭐☆</p>
-            <p><span class="original-price">15,000원</span> <span class="sale-price">12,000원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
+    <div id="weekly" class="tab-content ">
+<div class="book-card" data-category="Genre">
+<a class="book-link" href="../NewFlie/고독한 용의자.html"> 
+<span class="badge good">상</span>
+<img alt="고독한 용의자" src="../NewFlie/고독한용의자.jpg"/>
+<h4>고독한 용의자</h4>
+<p>찬호께이 <br> 위즈덤하우스</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="original-price">19,500원</span> <span class="sale-price">17,550원</span></p>
+</a></div>
 
-          <div class="book-card" data-category="children">
-            <span class="badge good">상</span>
-            <img src="https://image.aladin.co.kr/product/36485/29/cover200/k002039010_1.jpg" alt="대박이 사라진 날" />
-            <h4>대박이 사라진 날</h4>
-            <p>김수현 저 | 찰리북</p>
-            <p class="rating">⭐⭐⭐⭐⭐</p>
-            <p><span class="original-price">13,000원</span> <span class="sale-price">11,000원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
 
-          <div class="book-card" data-category="culture">
-            <span class="badge fair">중</span>
-            <img src="https://image.aladin.co.kr/product/36545/35/cover200/8960909351_1.jpg" alt="빈손의 영화" />
-            <h4>빈손의 영화</h4>
-            <p>김병규 저 | 마음산책</p>
-            <p class="rating">⭐⭐⭐☆☆</p>
-            <p><span class="original-price">14,500원</span> <span class="sale-price">12,600원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
+<div class="book-card" data-category="Domestic">
+<a class="book-link" href="../NewFlie/고래눈이 내리다.html">
+<span class="badge excellent">최상</span>
+<img alt="고래눈이 내리다" src="../NewFlie/고래눈이 내리다.jpg"/>
+<h4>고래눈이 내리다</h4>
+<p>김보영 <br> 래빗홀</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="original-price">19,500원</span> <span class="sale-price">17,550원</span></p>
+</a></div>
 
-          <div class="book-card" data-category="novel">
-            <span class="badge good">상</span>
-            <img
-              src="https://image.aladin.co.kr/product/4932/92/cover150/e897275619_1.jpg"
-              alt="나미야 잡화점의 기적"
-            />
-            <h4>나미야 잡화점의 기적</h4>
-            <p>히가시노 게이고 저 | 현대문학</p>
-            <p class="rating">⭐⭐⭐⭐☆</p>
-            <p><span class="original-price">13,000원</span> <span class="sale-price">6,300원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
 
-          <div class="book-card" data-category="essay">
-            <span class="badge good">상</span>
-            <img src="https://image.aladin.co.kr/product/33811/91/cover150/e122533076_1.jpg" alt="여행의 이유" />
-            <h4>여행의 이유</h4>
-            <p>김영하 저 | 문학동네</p>
-            <p class="rating">⭐⭐⭐⭐⭐</p>
-            <p><span class="original-price">10,500원</span> <span class="sale-price">5,000원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
-        </div>
+<div class="book-card" data-category="Foreign">
+<a class="book-link" href="../NewFlie/나는 파리를 불태운다.html">
+<span class="badge excellent">최상</span>
+<img alt="나는 파리를 불태운다" src="../NewFlie/나는 파리를 불태운다.jpg"/>
+<h4>나는 파리를 불태운다</h4>
+<p>브루노 야시엔스키 <br> 김영사</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">18,900원</span></p>
+</a></div>
 
-        <div id="new" class="tab-content">
-          <div class="book-card" data-category="language">
-            <span class="badge excellent">최상</span>
-            <img
-              src="https://image.aladin.co.kr/product/36261/52/cover500/k652038732_1.jpg"
-              alt="요즘 교사를 위한 AI 수업 활용 가이드"
-            />
-            <h4>요즘 교사를 위한 AI 수업 활용 가이드</h4>
-            <p>박진환 저 | 한빛미디어</p>
-            <p class="rating">⭐⭐⭐⭐⭐</p>
-            <p><span class="original-price">18,000원</span> <span class="sale-price">14,800원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
 
-          <div class="book-card" data-category="literature">
-            <span class="badge fair">중</span>
-            <img
-              src="https://image.aladin.co.kr/product/15136/29/cover500/k962533360_2.jpg"
-              alt="죽고 싶지만 떡볶이는 먹고 싶어"
-            />
-            <h4>죽고 싶지만 떡볶이는 먹고 싶어</h4>
-            <p>백세희 저 | 흔</p>
-            <p class="rating">⭐⭐⭐☆☆</p>
-            <p><span class="original-price">9,800원</span> <span class="sale-price">4,200원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
+<div class="book-card" data-category="Comics">
+<a class="book-link" href="../NewFlie/괴수 8호.html">
+<span class="badge excellent">최상</span>
+<img alt="괴수 8호" src="../NewFlie/괴수 8호.jpg"/>
+<h4>괴수 8호</h4>
+<p>마츠모토 나오야 <br> 서울미디어코믹스</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">5,400원</span></p>
+</a></div>
 
-          <div class="book-card" data-category="novel">
-            <span class="badge excellent">최상</span>
-            <img src="https://image.aladin.co.kr/product/9476/48/cover200/8937473135_1.jpg" alt="82년생 김지영" />
-            <h4>82년생 김지영</h4>
-            <p>조남주 저 | 민음사</p>
-            <p class="rating">⭐⭐⭐⭐☆</p>
-            <p><span class="original-price">9,500원</span> <span class="sale-price">4,500원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
 
-          <div class="book-card" data-category="children">
-            <span class="badge good">상</span>
-            <img src="https://image.aladin.co.kr/product/34/91/cover200/8971968710_2.gif" alt="마당을 나온 암탉" />
-            <h4>마당을 나온 암탉</h4>
-            <p>황선미 글 | 창비</p>
-            <p class="rating">⭐⭐⭐⭐⭐</p>
-            <p><span class="original-price">12,000원</span> <span class="sale-price">9,600원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
+<div class="book-card" data-category="Comics">
+<a class="book-link" href="../NewFlie/나츠메 우인장 31.html">
+<span class="badge excellent">최상</span>
+<img alt="나츠메 우인장 31" src="../NewFlie/나츠메 우인장 31.jpg"/>
+<h4>나츠메 우인장 31</h4>
+<p>미도리카와 유키 <br> 학산문화사</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">5,400원</span></p>
+</a></div>
 
-          <div class="book-card" data-category="culture">
-            <span class="badge excellent">최상</span>
-            <img src="https://image.aladin.co.kr/product/16956/21/cover150/e142434964_2.jpg" alt="예술가로 산다는 것" />
-            <h4>예술가로 산다는 것</h4>
-            <p>박영택, 김홍희 편저 | 마음산책</p>
-            <p class="rating">⭐⭐⭐⭐☆</p>
-            <p><span class="original-price">16,000원</span> <span class="sale-price">11,200원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
 
-          <div class="book-card" data-category="language">
-            <span class="badge excellent">최상</span>
-            <img
-              src="https://image.aladin.co.kr/product/30764/91/cover200/k242830553_1.jpg"
-              alt="영어 회화 핵심패턴 233"
-            />
-            <h4>영어 회화 핵심패턴 233</h4>
-            <p>길벗이지톡 편집부 | 길벗이지톡</p>
-            <p class="rating">⭐⭐⭐⭐☆</p>
-            <p><span class="original-price">14,000원</span> <span class="sale-price">12,000원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
+<div class="book-card" data-category="Children">
+<a class="book-link" href="../NewFlie/내가 나라서 정말 좋아.html">
+<span class="badge excellent">최상</span>
+<img alt="내가 나라서 정말 좋아" src="../NewFlie/내가 나라서 정말 좋아.jpg"/>
+<h4>내가 나라서 정말 좋아</h4>
+<p>김지훤 <br> 길벗</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">17,820원</span></p>
+</a></div>
 
-          <div class="book-card" data-category="magazine">
-            <span class="badge fair">중</span>
-            <img
-              src="https://image.aladin.co.kr/product/34693/1/cover200/k452933915_1.jpg"
-              alt="매거진 B Vol.98 Uniqlo"
-            />
-            <h4>매거진 B Vol.98 Uniqlo</h4>
-            <p>B Media Company 편집부 | 매거진B</p>
-            <p class="rating">⭐⭐⭐☆☆</p>
-            <p><span class="original-price">25,000원</span> <span class="sale-price">23,750원</span></p>
-            <button class="searchButton">장바구니</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <hr />
+<div class="book-card" data-category="Genre">
+<a class="book-link" href="../NewFlie/메리골드 마음 식물원.html">
+<span class="badge excellent">최상</span>
+<img alt="메리골드 마음 식물원" src="../NewFlie/메리골드 마음 식물원.jpg"/>
+<h4>메리골드 마음 식물원</h4>
+<p>윤정은 <br> 북로망스</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">16,200원</span></p>
+</a></div> 
+
+
+<div class="book-card" data-category="Art">
+<a class="book-link" href="../NewFlie/미술관에 간 할미.html">
+<span class="badge excellent">최상</span>
+<img alt="미술관에 간 할미" src="../NewFlie/미술관에 간 할미.jpg"/>
+<h4>미술관에 간 할미</h4>
+<p>정보라 <br>김영사</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">18,900원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Genre">
+
+<a class="book-link" href="../NewFlie/밀실 황금시대의 살인.html">
+<span class="badge excellent">최상</span>
+<img alt="밀실 황금시대의 살인" src="../NewFlie/밀실 황금시대의 살인.jpg"/>
+<h4>밀실 황금시대의 살인</h4>
+<p>가모사키 단로 <br> 리드비</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">16,020원</span></p>
+</a></div>
+
+
+
+<div class="book-card" data-category="Foreign">
+  <a class="book-link" href="../NewFlie/미키.html">
+<span class="badge excellent">최상</span>
+<img alt="미키7 : 반물질의 블루스" src="../NewFlie/미키.jpg"/>
+<h4>미키7 : 반물질의 블루스</h4>
+<p>에드워드 애슈턴 <br> 황금가지</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">15,300원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Business">
+  <a class="book-link" href="../NewFlie/바람을 보는 투자.html">
+<span class="badge excellent">최상</span>
+<img alt="바람을 보는 투자" src="../NewFlie/바람을 보는 투자.jpg"/>
+<h4>바람을 보는 투자</h4>
+<p>피터 오펜하이머 <br> 워터베어프레스</p>
+<p class="rating">⭐⭐⭐⭐⭐</p>
+<p><span class="sale-price">17,550원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Art">
+  <a class="book-link" href="../NewFlie/예술이라는 일.html">
+<span class="badge good">상</span>
+<img alt="예술이라는 일" src="../NewFlie/예술이라는 일.jpg"/>
+<h4>예술이라는 일</h4>
+<p>백영옥 <br>다산책방</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">15,750원</span></p>
+
+</a></div>
+
+
+<div class="book-card" data-category="Foreign">
+  <a class="book-link" href="../NewFlie/오닉스 스톰.html">
+<span class="badge good">상</span>
+<img alt="오닉스 스톰" src="../NewFlie/오닉스 스톰.jpg"/>
+<h4>오닉스 스톰</h4>
+<p>샘 서덜랜드 <br> 아르테</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">17,820원</span></p>
+
+</a></div>
+
+
+<div class="book-card" data-category="Comics">
+  <a class="book-link" href="../NewFlie/블루 록.html">
+<span class="badge good">상</span>
+<img alt="블루 록" src="../NewFlie/블루 록.jpg"/>
+<h4>블루 록</h4>
+<p>카네시로 무네유키 <br>대원씨아이</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">5,400원</span></p>
+
+</a></div>
+
+<div class="book-card" data-category="Genre">
+  <a class="book-link" href="../NewFlie/신주로.html">
+<span class="badge good">상</span>
+<img alt="신주로" src="../NewFlie/신주로.jpg"/>
+<h4>신주로</h4>
+<p>우사미 린<br>아르테</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">15,750원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Children">
+  <a class="book-link" href="../NewFlie/쓰레기 섬 괴물.html">
+<span class="badge good">상</span>
+<img alt="쓰레기 섬 괴물" src="../NewFlie/쓰레기 섬 괴물.jpg"/>
+<h4>쓰레기 섬 괴물</h4>
+<p>데이비드 알몬드 <br> 문학동네</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">12,600원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Foreign">
+  <a class="book-link" href="../NewFlie/아가씨와 밤.html">
+<span class="badge good">상</span>
+<img alt="아가씨와 밤" src="../NewFlie/아가씨와 밤.jpg"/>
+<h4>아가씨와 밤</h4>
+<p>기욤 뮈소 <br> 밝은세상</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">15,300원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Domestic">
+  <a class="book-link" href="../NewFlie/아이들의 집.html">
+<span class="badge good">상</span>
+<img alt="아이들의 집" src="../NewFlie/아이들의 집.jpg"/>
+<h4>아이들의 집</h4>
+<p>정보라 <br> 열림원</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">14,400원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Comics">
+  <a class="book-link" href="../NewFlie/약사의 혼잣말.html">
+<span class="badge fair">중</span>
+<img alt="약사의 혼잣말" src="../NewFlie/약사의 혼잣말.jpg"/>
+<h4>약사의 혼잣말 15</h4>
+<p>휴우가 나츠 <br> 학산문화사</p>
+<p class="rating">⭐⭐⭐☆☆</p>
+<p><span class="sale-price">8,100원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Children">
+  <a class="book-link" href="../NewFlie/어린이는 멀리 간다.html">
+<span class="badge fair">중</span>
+<img alt="어린이는 멀리 간다" src="../NewFlie/어린이는 멀리 간다.jpg"/>
+<h4>어린이는 멀리 간다</h4>
+<p>김지은 <br> 창비</p>
+<p class="rating">⭐⭐⭐☆☆</p>
+<p><span class="sale-price">15,120원</span></p>
+</a></div></div>
+
+<div id="new" class="tab-content">
+<div class="book-card" data-category="Children">
+  <a class="book-link" href="../NewFlie/어쩌다 좋은 일이 생길지도.html">
+<span class="badge good">상</span>
+<img alt="어쩌다 좋은 일이 생길지도" src="../NewFlie/어쩌다 좋은 일이 생길지도.jpg"/>
+<h4>어쩌다 좋은 일이 <br> 생길지도</h4>
+<p>요시타케 신스케 <br> 주니어김영사</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">12,600원</span></p>
+</a></div>
+
+
+
+<div class="book-card" data-category="Business">
+  <a class="book-link" href="../NewFlie/한 권으로 끝내는 연금 포트폴리오.html">
+<span class="badge good">상</span>
+<img alt="한 권으로 끝내는 연금 포트폴리오" src="../NewFlie/한 권으로 끝내는 연금 포트폴리오.jpg"/>
+<h4>한 권으로 끝내는 연금 포트폴리오</h4>
+<p>이승훈 <br> 비즈니스북스</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">17,100원</span></p>
+</a></div>
+
+<div class="book-card" data-category="Art">
+  
+<a class="book-link" href="../NewFlie/오아시스 마플.html">
+<span class="badge fair">중</span>
+<img alt="오아시스 마플" src="../NewFlie/오아시스 마플.jpg"/>
+<h4>오아시스 마플</h4>
+<p>서이슬 <br> 유유</p>
+<p class="rating">⭐⭐⭐☆☆</p>
+<p><span class="sale-price">13,500원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Children">
+  <a class="book-link" href="../NewFlie/오월의 달리기.html">
+<span class="badge fair">중</span>
+<img alt="오월의 달리기" src="../NewFlie/오월의 달리기.jpg"/>
+<h4>오월의 달리기</h4>
+<p>박해울 <br> 창비</p>
+<p class="rating">⭐⭐⭐☆☆</p>
+<p><span class="sale-price">11,700원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Business">
+  <a class="book-link" href="../NewFlie/왜 좋은 일자리는 늘 부족한가.html">
+<span class="badge good">상</span>
+<img alt="왜 좋은 일자리는 늘 부족한가" src="../NewFlie/왜 좋은 일자리는 늘 부족한가.jpg"/>
+<h4>왜 좋은 일자리는 <br> 늘 부족한가</h4>
+<p>데이비드 오터 <br> 어크로스</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">17,820원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Art">
+  <a class="book-link" href="../NewFlie/장르영화 대사전.html">
+<span class="badge good">상</span>
+<img alt="장르영화 대사전" src="../NewFlie/장르영화 대사전.jpg"/>
+<h4>장르영화 대사전</h4>
+<p>정성일 <br> 워크룸프레스</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">33,300원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Business">
+  <a class="book-link" href="../NewFlie/전략은 도구다.html">
+<span class="badge good">상</span>
+<img alt="전략은 도구다" src="../NewFlie/전략은 도구다.jpg"/>
+<h4>전략은 도구다</h4>
+<p>문성후 <br> 쌤앤파커스</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">16,020원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Art">
+  <a class="book-link" href="../NewFlie/정확한 사랑의 실험.html">
+<span class="badge good">상</span>
+<img alt="정확한 사랑의 실험" src="../NewFlie/정확한 사랑의 실험.jpg"/>
+<h4>정확한 사랑의 실험</h4>
+<p>정세랑 <br> 문학동네</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">13,050원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Business">
+  <a class="book-link" href="../NewFlie/챗GPT.html">
+<span class="badge good">상</span>
+<img alt="챗GPT" src="../NewFlie/챗GPT.jpg"/>
+<h4>챗GPT</h4>
+<p>이임복 <br> 미래의창</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">15,300원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Domestic">
+  <a class="book-link" href="../NewFlie/토막 난 우주를 안고서.html">
+<span class="badge good">상</span>
+<img alt="토막 난 우주를 안고서" src="../NewFlie/토막 난 우주를 안고서.jpg"/>
+<h4>토막 난 우주를 안고서</h4>
+<p>이한 <br> 한겨레출판</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">13,320원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Children">
+  <a class="book-link" href="../NewFlie/푸른 상자 18 (더블특전판) .html">
+<span class="badge good">상</span>
+<img alt="푸른 상자 18 (더블특전판)" src="../NewFlie/푸른 상자 18 (더블특전판).jpg"/>
+<h4>푸른 상자 18 <br>(더블특전판)</h4>
+<p>미우라 코우지 <br> 학산문화사</p>
+<p class="rating">⭐⭐⭐⭐☆</p>
+<p><span class="sale-price">5,400원</span></p>
+</a></div>
+
+
+<div class="book-card" data-category="Domestic">
+  <a class="book-link" href="../NewFlie/혼모노.html">
+<span class="badge fair">중</span>
+<img alt="혼모노" src="../NewFlie/혼모노.jpg"/>
+<h4>혼모노</h4>
+<p>성해나 <br>창비</p>
+<p class="rating">⭐⭐⭐☆☆</p>
+<p><span class="sale-price">16,200원</span></p>
+</a></div></div>
+
+</div>
+</div>
+<hr/>
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-left">
