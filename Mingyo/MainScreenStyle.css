@@ -10,6 +10,23 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.05);
+}
+
+/* 추천 도서 링크 영역 개선 */
+.main-container > a {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.main-container > a:hover {
+  transform: none;
 }
 
 /* ===== 네비게이션 ===== */
@@ -163,11 +180,20 @@ a {
 .book-box {
   display: flex;
   gap: 20px;
+  width: 100%;
   background-color: white;
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  margin-right: 700px;
+}
+
+.book-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .book-box-image {
@@ -210,6 +236,7 @@ a {
 .horizontal-scroll {
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
   gap: 20px;
   padding-bottom: 10px;
 }
@@ -227,6 +254,15 @@ a {
   flex: 0 0 auto;
   width: 120px;
   text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-right: 17.5px;
+}
+
+.book-item:hover {
+  transform: none;
 }
 
 .book-item img {
@@ -273,4 +309,8 @@ a {
 
 .footer-right a:hover {
   text-decoration: underline;
+}
+
+.carousel-item a {
+  display: block;
 }

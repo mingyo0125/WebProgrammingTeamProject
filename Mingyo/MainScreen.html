@@ -25,10 +25,36 @@
       <button class="carousel-arrow left" onclick="moveSlide(-1)">&#10094;</button>
       <div class="carousel-wrapper">
         <div class="carousel-track" id="carousel-track">
-          <div class="carousel-item"><img src="Group 1.png" alt="" /></div>
-          <div class="carousel-item"><img src="Group 2.png" alt="" /></div>
-          <div class="carousel-item"><img src="Group 3.png" alt="" /></div>
-          <div class="carousel-item"><img src="Group 4.png" alt="" /></div>
+          <div class="carousel-item">
+            <a href="../NewFlie/어린이는 멀리 간다.html">
+              <img src="../NewFlie/어린이는 멀리 간다.jpg" alt="표지 이미지" />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="../NewFlie/푸른 상자 18 (더블특전판) .html">
+              <img src="../NewFlie/푸른 상자 18 (더블특전판).jpg" alt="표지 이미지" />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="../NewFlie/오닉스 스톰.html">
+              <img src="../NewFlie/오닉스 스톰.jpg" alt="표지 이미지" />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="../NewFlie/어쩌다 좋은 일이 생길지도.html">
+              <img src="../NewFlie/어쩌다 좋은 일이 생길지도.jpg" alt="표지 이미지" />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="../NewFlie/한 권으로 끝내는 연금 포트폴리오 .html">
+              <img src="../NewFlie/한 권으로 끝내는 연금 포트폴리오.jpg" alt="표지 이미지" />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="../NewFlie/챗GPT.html">
+              <img src="../NewFlie/챗GPT.jpg" alt="표지 이미지" />
+            </a>
+          </div>
         </div>
       </div>
       <button class="carousel-arrow right" onclick="moveSlide(1)">&#10095;</button>
@@ -36,156 +62,117 @@
     </div>
 
     <div class="main-container">
-      <!-- 카테고리 선택 -->
-      <select id="category-selector" onchange="changeCategory(this.value)">
-        <option value="cat1">장르 소설</option>
-        <option value="cat2">과학</option>
-        <option value="cat3">예술/대중문화</option>
-        <option value="cat4">만화</option>
-      </select>
-
-      <!-- 카테고리별 콘텐츠 -->
       <div id="category-content">
-        <div class="category-section" id="cat1-section">
-          <div class="section-title">오늘의 추천 도서</div>
+        <div class="section-title">오늘의 추천 도서</div>
+        <a href="../NewFlie/고독한 용의자.html">
           <div class="book-box">
-            <img src="MD's Choice.jpg" class="book-box-image" />
+            <img src="../NewFlie/고독한용의자.jpg" class="book-box-image" />
             <div class="book-box-text">
-              <h3>긴키 지방의 어느 장소에 대하여</h3>
-              <h4>세스지 | 반타 | 2025년 4월</h4>
+              <h3>고독한 용의자</h3>
+              <h4>찬호께이 | 위즈덤하우스 | 2025년 4월</h4>
               <h4 class="price">15,120원</h4>
-              <p><span class="highlight">‘이 호러가 대단하다’ 1위!</span><br />일본 내 호러 열풍에 불을 지핀 화제작</p>
+              <p><span class="highlight">추리 소설의 압도적 일인자</span><br />'13·67' '망내인' 찬호께이 신작</p>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="category-section" id="cat2-section" style="display: none">
-          <div class="section-title">지니의 Choice</div>
-          <div class="book-box">
-            <img src="챗GPT.jpg" class="book-box-image" />
-            <div class="book-box-text">
-              <h3>비전공자도 이해할 수 있는 챗GPT</h3>
-              <h4>박상길 | 비즈니스북스 | 2025년 5월</h4>
-              <h4 class="price">17,550원</h4>
-              <p><span class="highlight">AI 입문 베스트셀러</span><br />비전공자도 쉽게 이해하는 생성형 AI 개론서</p>
-            </div>
+        <!-- 주간 베스트셀러 -->
+        <section class="horizontal-section">
+          <div class="section-title">주간 베스트셀러</div>
+          <div class="horizontal-scroll">
+            <a href="../NewFlie/고래눈이 내리다.html">
+              <div class="book-item">
+                <img src="../NewFlie/고래눈이 내리다.jpg" alt="책 표지" />
+                <div>고래눈이 내리다</div>
+                <br />
+              </div>
+            </a>
+            <a href="../NewFlie/나는 파리를 불태운다.html.html">
+              <div class="book-item">
+                <img src="../NewFlie/나는 파리를 불태운다.jpg" alt="책 표지" />
+                <div>나는 파리를 불태운다</div>
+              </div>
+            </a>
+            <a href="../NewFlie/내가 나라서 정말 좋아.html">
+              <div class="book-item">
+                <img src="../NewFlie/내가 나라서 정말 좋아.jpg" alt="책 표지" />
+                <div>내가 나라서 정말 좋아</div>
+              </div>
+            </a>
+            <a href="../NewFlie/메리골드 마음 식물원.html">
+              <div class="book-item">
+                <img src="../NewFlie/메리골드 마음 식물원.jpg" alt="책 표지" />
+                <div>메리골드 마음 식물원</div>
+              </div>
+            </a>
+            <a href="../NewFlie/미키.html">
+              <div class="book-item">
+                <img src="../NewFlie/미키.jpg" alt="책 표지" />
+                <div>미키</div>
+                <br />
+              </div>
+            </a>
+            <a href="../NewFlie/밀실 황금시대의 살인.html">
+              <div class="book-item">
+                <img src="../NewFlie/밀실 황금시대의 살인.jpg" alt="책 표지" />
+                <div>밀실 황금시대의 살인</div>
+              </div>
+            </a>
           </div>
-        </div>
+        </section>
 
-        <div class="category-section" id="cat3-section" style="display: none">
-          <div class="section-title">지니의 Choice</div>
-          <div class="book-box">
-            <img src="오아시스 마플.jpg" class="book-box-image" />
-            <div class="book-box-text">
-              <h3>오아시스 더 마스터플랜</h3>
-              <h4>케빈 커민스 | 클 | 2025년 5월</h4>
-              <h4 class="price">49,500원</h4>
-              <p><span class="highlight">오아시스 15년 만의 귀환</span><br />그들의 초창기를 기록한 사진집</p>
-            </div>
+        <section class="horizontal-section">
+          <div class="section-title">최근 화제의 책</div>
+          <div class="horizontal-scroll">
+            <a href="../NewFlie/괴수 8호.html">
+              <div class="book-item">
+                <img src="../NewFlie/괴수 8호.jpg" alt="책 표지" />
+                <div>괴수 8호</div>
+                <br />
+              </div>
+            </a>
+            <a href="../NewFlie/미술관에 간 할미.html">
+              <div class="book-item">
+                <img src="../NewFlie/미술관에 간 할미.jpg" alt="책 표지" />
+                <div>미술관에 간 할미</div>
+                <br />
+              </div>
+            </a>
+            <a href="../NewFlie/블루 록.html">
+              <div class="book-item">
+                <img src="../NewFlie/블루 록.jpg" alt="책 표지" />
+                <div>블루 록</div>
+                <br />
+              </div>
+            </a>
+            <a href="../NewFlie/나츠메 우인장 31.html">
+              <div class="book-item">
+                <img src="../NewFlie/나츠메 우인장 31.jpg" alt="책 표지" />
+                <div>나츠메 우인장 31</div>
+                <br />
+              </div>
+            </a>
+            <a href="../NewFlie/신주로.html">
+              <div class="book-item">
+                <img src="../NewFlie/신주로.jpg" alt="책 표지" />
+                <div>신주로</div>
+                <br />
+              </div>
+            </a>
+            <a href="../NewFlie/약사의 혼잣말.html">
+              <div class="book-item">
+                <img src="../NewFlie/약사의 혼잣말.jpg" alt="책 표지" />
+                <div>약사의 혼잣말</div>
+                <br />
+              </div>
+            </a>
           </div>
-        </div>
-
-        <div class="category-section" id="cat4-section" style="display: none">
-          <div class="section-title">지니의 Choice</div>
-          <div class="book-box">
-            <img src="괴수 8호.jpg" class="book-box-image" />
-            <div class="book-box-text">
-              <h3>괴수 8호 15 (트리플 특장판)</h3>
-              <h4>마츠모토 나오야 | 서울문화사 | 2025년 5월</h4>
-              <h4 class="price">5,400원</h4>
-              <p><span class="highlight">트리플 특장판</span><br />괴수 9호와의 마지막 전투</p>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
-
-      <!-- 주간 베스트셀러 -->
-      <section class="horizontal-section">
-        <div class="section-title">주간 베스트셀러</div>
-        <div class="horizontal-scroll">
-          <div class="book-item">
-            <a href=""
-              ><img src="신주로.jpg" />
-              <div>신주로</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="나는 파리를 불태운다.jpg" />
-              <div>나는 파리를 불태운다</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="아이들의 집.jpg" />
-              <div>아이들의 집</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="아가씨와 밤.jpg" />
-              <div>아가씨와 밤</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="오닉스 스톰.jpg" />
-              <div>오닉스 스톰</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="밀실 황금시대의 살인.jpg" />
-              <div>밀실 황금시대의 살인</div></a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="horizontal-section">
-        <div class="section-title">최근 화제의 책</div>
-        <div class="horizontal-scroll">
-          <div class="book-item">
-            <a href=""
-              ><img src="신주로.jpg" />
-              <div>신주로</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="나는 파리를 불태운다.jpg" />
-              <div>나는 파리를 불태운다</div></a
-            >
-          </div>
-          <div div class="book-item">
-            <a href=""
-              ><img src="아이들의 집.jpg" />
-              <div>아이들의 집</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="아가씨와 밤.jpg" />
-              <div>아가씨와 밤</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="오닉스 스톰.jpg" />
-              <div>오닉스 스톰</div></a
-            >
-          </div>
-          <div class="book-item">
-            <a href=""
-              ><img src="밀실 황금시대의 살인.jpg" />
-              <div>밀실 황금시대의 살인</div></a
-            >
-          </div>
-        </div>
-      </section>
     </div>
 
     <hr />
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-left">
