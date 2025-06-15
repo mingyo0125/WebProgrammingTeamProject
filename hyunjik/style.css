@@ -1,5 +1,6 @@
 /* ===== 기본 및 기존 스타일 유지 ===== */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -115,14 +116,14 @@ nav a:hover {
 }
 
 /* 활성 카테고리 스타일 */
-#filter-all:checked ~ .container .category-list li[data-category="all"],
-#filter-novel:checked ~ .container .category-list li[data-category="novel"],
-#filter-essay:checked ~ .container .category-list li[data-category="essay"],
-#filter-literature:checked ~ .container .category-list li[data-category="literature"],
-#filter-children:checked ~ .container .category-list li[data-category="children"],
-#filter-culture:checked ~ .container .category-list li[data-category="culture"],
-#filter-language:checked ~ .container .category-list li[data-category="language"],
-#filter-magazine:checked ~ .container .category-list li[data-category="magazine"] {
+#filter-all:checked ~ .container .category-list li[data-category='all'],
+#filter-novel:checked ~ .container .category-list li[data-category='novel'],
+#filter-essay:checked ~ .container .category-list li[data-category='essay'],
+#filter-literature:checked ~ .container .category-list li[data-category='literature'],
+#filter-children:checked ~ .container .category-list li[data-category='children'],
+#filter-culture:checked ~ .container .category-list li[data-category='culture'],
+#filter-language:checked ~ .container .category-list li[data-category='language'],
+#filter-magazine:checked ~ .container .category-list li[data-category='magazine'] {
   background-color: #005599;
   color: white;
   font-weight: bold;
@@ -149,7 +150,7 @@ nav a:hover {
 
 .tab-menu li:hover {
   background-color: #f0f0f0;
-  color: #007BFF;
+  color: #007bff;
 }
 
 .tab-menu li label {
@@ -159,8 +160,8 @@ nav a:hover {
 }
 
 /* 활성 탭 스타일 */
-#tab-weekly:checked ~ .container .tab-menu li[data-tab="weekly"],
-#tab-new:checked ~ .container .tab-menu li[data-tab="new"] {
+#tab-weekly:checked ~ .container .tab-menu li[data-tab='weekly'],
+#tab-new:checked ~ .container .tab-menu li[data-tab='new'] {
   font-weight: bold;
   border-bottom: 3px solid #005599;
 }
@@ -209,31 +210,31 @@ nav a:hover {
 }
 
 /* 각 카테고리별 필터링 */
-#filter-novel:checked ~ .container .book-card[data-category="novel"] {
+#filter-novel:checked ~ .container .book-card[data-category='novel'] {
   display: flex;
 }
 
-#filter-essay:checked ~ .container .book-card[data-category="essay"] {
+#filter-essay:checked ~ .container .book-card[data-category='essay'] {
   display: flex;
 }
 
-#filter-literature:checked ~ .container .book-card[data-category="literature"] {
+#filter-literature:checked ~ .container .book-card[data-category='literature'] {
   display: flex;
 }
 
-#filter-children:checked ~ .container .book-card[data-category="children"] {
+#filter-children:checked ~ .container .book-card[data-category='children'] {
   display: flex;
 }
 
-#filter-culture:checked ~ .container .book-card[data-category="culture"] {
+#filter-culture:checked ~ .container .book-card[data-category='culture'] {
   display: flex;
 }
 
-#filter-language:checked ~ .container .book-card[data-category="language"] {
+#filter-language:checked ~ .container .book-card[data-category='language'] {
   display: flex;
 }
 
-#filter-magazine:checked ~ .container .book-card[data-category="magazine"] {
+#filter-magazine:checked ~ .container .book-card[data-category='magazine'] {
   display: flex;
 }
 
