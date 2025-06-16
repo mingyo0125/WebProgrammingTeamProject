@@ -42,7 +42,7 @@
       font-size: 16px;
       font-weight: bold;
       border-radius: 8px;
-      background-color: #ccc;
+      background-color: #0078D4;
       color: white;
       margin-bottom: 10px;
       cursor: pointer;
@@ -72,6 +72,7 @@
 
     .join-button {
       background-color: #0078D4;
+      text-decoration-line: none;
     }
 
     a.button {
@@ -90,14 +91,15 @@
 </head>
 <body>
   <div class="login-container">
-    <img class="logo" src="지니.PNG">
+    <img class="logo" src="BookShelf.PNG">
+    <form action="MainScreen.html">
+  <div class="input-box">
+    <input type="text" name="username" placeholder="아이디를 입력해 주세요." required>
+    <input type="password" name="password" placeholder="비밀번호를 입력해 주세요." required>
+  </div>
+  <button type="submit" class="button just-button">로그인</button>
+</form>
 
-    <div class="input-box">
-      <input type="text" placeholder="아이디를 입력해 주세요.">
-      <input type="password" placeholder="비밀번호를 입력해 주세요.">
-    </div>
-    <!--메인화면 html 입력--->
-    <a href="#" class="button just-button">로그인</a>
     <div class="options">
       <label class="remember">
         <input type="checkbox"> 아이디 저장
