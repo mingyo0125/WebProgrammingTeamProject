@@ -1,4 +1,3 @@
-/* ===== 기본 및 기존 스타일 유지 ===== */
 html,
 body {
   height: 100%;
@@ -38,7 +37,6 @@ body {
   flex-direction: column;
 }
 
-/* ===== 네비게이션 ===== */
 nav {
   background-color: #005599;
   color: white;
@@ -61,7 +59,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ===== 검색 바 ===== */
 .searchBar {
   display: flex;
   justify-content: center;
@@ -90,12 +87,10 @@ nav a:hover {
   background-color: #003f80;
 }
 
-/* ===== 카테고리 필터 (라디오 버튼 숨기기) ===== */
 .category-filter {
   display: none;
 }
 
-/* ===== 카테고리 리스트 ===== */
 .category-list {
   list-style: none;
   padding: 0;
@@ -119,7 +114,6 @@ nav a:hover {
   width: 100%;
 }
 
-/* 활성 카테고리 스타일 */
 #filter-all:checked ~ .container .category-list li[data-category='all'],
 #filter-Domestic:checked ~ .container .category-list li[data-category='Domestic'],
 #filter-Foreign:checked ~ .container .category-list li[data-category='Foreign'],
@@ -133,7 +127,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-/* ===== 탭 메뉴 ===== */
 .tab-filter {
   display: none;
 }
@@ -163,14 +156,12 @@ nav a:hover {
   width: 100%;
 }
 
-/* 활성 탭 스타일 */
 #tab-weekly:checked ~ .container .tab-menu li[data-tab='weekly'],
 #tab-new:checked ~ .container .tab-menu li[data-tab='new'] {
   font-weight: bold;
   border-bottom: 3px solid #005599;
 }
 
-/* ===== 탭 콘텐츠 기본 숨김 ===== */
 .tab-content {
   display: none;
   flex-wrap: wrap;
@@ -178,7 +169,6 @@ nav a:hover {
   gap: 30px;
 }
 
-/* 활성 탭 표시 */
 #tab-weekly:checked ~ .container #weekly {
   display: flex;
 }
@@ -187,7 +177,6 @@ nav a:hover {
   display: flex;
 }
 
-/* ===== 책 카드 필터링 ===== */
 .book-card {
   flex: 0 0 auto;
   width: 120px;
@@ -200,12 +189,10 @@ nav a:hover {
   display: none;
 }
 
-/* 전체 카테고리 선택시 모든 책 표시 */
 #filter-all:checked ~ .container .book-card {
   display: flex;
 }
 
-/* 각 카테고리별 필터링 */
 #filter-Domestic:checked ~ .container .book-card[data-category='Domestic'] {
   display: flex;
 }
@@ -302,7 +289,6 @@ nav a:hover {
   color: #f39c12;
 }
 
-/* ===== 상단 바 ===== */
 .top-bar {
   display: flex;
   flex-direction: column;
@@ -310,7 +296,6 @@ nav a:hover {
   margin: 10px 0 20px;
 }
 
-/* ===== 푸터 ===== */
 .footer {
   background-color: #f2f2f2;
   padding: 20px 0;

@@ -1,4 +1,3 @@
-/* 메인 콘텐츠 */
 .main {
   padding: 20px;
   overflow: hidden;
@@ -195,7 +194,6 @@ body {
   padding: 20px;
 }
 
-/* 종이책, 전자책 부분분 */
 input[type='radio'] {
   display: none;
 }
@@ -244,7 +242,6 @@ input#tab-ebook:checked ~ .content .ebook {
   background: #005fcc;
 }
 
-/* ===== 푸터 ===== */
 .footer {
   background-color: #f2f2f2;
   padding: 20px 0;
